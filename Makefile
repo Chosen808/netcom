@@ -1,12 +1,10 @@
 #******************************************************************************
-# Copyright (C) 2026 by Dwayne St George
-#
-# 2024 Mashiach Games. All rights reserved. This notice serves as a clear 
-# declaration that Mashiach Games (Representing Jesus Christ), the copyright holder, 
-# own's the rights to ths software and all of its contents. No part of this software
-# may be modified, copied, reproduced or distributed without the permission of
-# Mashiach Games.
-#
+# THIS SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPPLIED,
+# INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A
+# PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+# HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+# OF CONTRACT, TORT OR OTHERWSIE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE 
+# SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #*****************************************************************************
 
 #------------------------------------------------------------------------------
