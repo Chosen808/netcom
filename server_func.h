@@ -25,7 +25,7 @@
 #define STRBUF 100000
 
 // Font Colors
-//      lower case 
+//      normal fonts 
 #define ANSI_FONT_RED "\x1b[31m"
 #define ANSI_FONT_GREEN "\x1b[32M"
 #define ANSI_FONT_YELLOW "\x1b[33m"
@@ -33,7 +33,7 @@
 #define ANSI_FONT_MAGENTA "\x1b[35m"
 #define ANSI_FONT_CYAN "\x1b[36m"
 #define ANSI_FONT_RESET "\x1b[0m"   // Font reset
-//      upper case 
+//      bold fonts
 #define ANSI_FONT_BOLD_RED "\033[1;31m"
 #define ANSI_FONT_BOLD_GREEN "\033[1;32m"
 #define ANSI_FONT_BOLD_YELLOW "\033[1;33m"
@@ -42,6 +42,7 @@
 #define ANSI_FONT_BOLD_CYAN "\033[1;36m"
 #define ANSI_FONT_BOLD_WHITE "033[1;37m"
 
+// Used in converting command strings to integers 
 enum control
 {
     UNKNOWN_COMMAND,
@@ -50,13 +51,14 @@ enum control
     HELP,
 } ;
 
+// Data_senrec_t can be used to pass several variables in a multithread function
 struct DATA_senrec_t
 {
-    int fd;
-    char *sendstr;
-    char *recstr;
-    int len;
-    int control;
+    int fd;     // file descriptor
+    char *sendstr;  // string to send
+    char *recstr;   // string being received
+    int len;    // lenght of strings
+    int control;    // control for threadsendorreceive () i for sending, 2 for receiving 
 };
 
 /**
