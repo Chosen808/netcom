@@ -38,7 +38,6 @@ int sendall (int fd, char *str, int *len)
         while (total < *len)
         {
             n = send (fd, str+total, bytesleft, 0);
-            //printf ("n = %d \n", n);
 
             if (n == -1)
             {
@@ -185,7 +184,6 @@ int chat (int fd, int new_fd, char *sendstr, char *recstr, int *sendlen, int *re
             return 0;
         }
         
-        //printf (ANSI_FONT_RED"server>>>"ANSI_FONT_BOLD_GREEN"send: \n"ANSI_FONT_RESET);
         printf (ANSI_FONT_RED"server>>> "ANSI_FONT_RESET);
         fgets (sendstr, STRBUF, stdin);
 
@@ -245,7 +243,7 @@ void *receive_handler (void *sockfd)
     while ((len = recv (fd, rx_buffer, STRBUF - 1, 0)) > 0)
     {
         rx_buffer[STRBUF - 1] = '\0';
-        //printf (ANSI_FONT_RED"server>>>"ANSI_FONT_BOLD_GREEN"received: "ANSI_FONT_RESET"%s", rx_buffer);
+
         printf (ANSI_FONT_RED"\nserver>>>"ANSI_FONT_RESET ANSI_FONT_BLUE"%s\n"ANSI_FONT_RESET ANSI_FONT_RED"server>>> "ANSI_FONT_RESET, rx_buffer);
         fflush(stdout);
         memset (rx_buffer, 0, STRBUF);

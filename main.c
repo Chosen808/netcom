@@ -118,22 +118,22 @@ int main (int argc, char *argv[])
                     // This loop will take input for Port number and string
                     while (count != 2)
                     {
+                        // Checks if port has been set and request a port number if false
                         if (!portset)
                         {
                              printf ("\033[31mserver>>>\033[0m \033[1;32mEnter Port Number:\033[0m ");
                              fgets (strbuf, STRBUF, stdin);
                         
                              numcheck = numbercheck (strbuf);   // checks if string contains numercial characters 
-                        
+                             charsub (strbuf, '\n', '\0');  // Will substitue \n with \0 that fget inserts so port can cannot numeric character only
                         }
-                       
+                        // If the port number is set will request a string to send
                         if (portset)
                         {
                             printf ("\033[31mserver>>>\033[0m \033[1;32mEnter String to send:\033[0m ");
                             fgets (strbuf, STRBUF, stdin);
                         }
                             
-                         //char *endptr;  
                          
                         if (strcmp (strbuf, "\x1B\n") == 0)
                         {
@@ -143,10 +143,7 @@ int main (int argc, char *argv[])
 
                             return 0;
                         }
-
-                        // Will subsittute \n with \0 which was placed in string by fgets()
-                        charsub (strbuf, '\n', '\0');
- 
+                        // If numbercheck() returns true for numbers only, and count equals 0  
                         if (isaninteger (numcheck) && count == 0)
                         {                    
                             err_chk (getaddrinfo (NULL, strbuf, &hints, &result), 0, "getaddrinfo");
