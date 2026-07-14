@@ -7,8 +7,8 @@ Netcom is a simple terminal application built to support several methods of netw
 - Linux
 - FreeBSD
 - macOS
-- Microsft Windows (Coming soon, God Will)
+- Microsoft Windows (Coming soon, God Will)
 
-Currently netcom only supports Linux systems. To build ensure the GNU Compiler Collection (GCC) is installed and run `make`.
+Currently netcom supports Linux, FreeBSD and macOS systems. To build ensure the GNU Compiler Collection (GCC) is installed and run `make`.
 
 # To Jesus be the glory
