@@ -26,8 +26,6 @@
 # Platform Overrides:
 #      CPU - HOST
 #      ARCH - x86 & x64
-#      SPECS - Specs file to give the linker (nosys.specs)
-#
 #------------------------------------------------------------------------------
 
 # Architecture Specific Flags
@@ -67,7 +65,6 @@ build : $(main_SRCS)
 endif 
 
 # This phony of clean was created to prevent any errors that may occur if there is a file named clean
+.PHONY : clean
 clean :
 	rm -r $(TARGET)
-.PHONY : clean 
-
