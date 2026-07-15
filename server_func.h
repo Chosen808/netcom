@@ -194,4 +194,23 @@ int threadsendorreceive (void *arg);
  */
 void *receive_handler (void *sockfd);
 
+
+/**
+ * @brief This function with print helper information about the application
+ *
+ * @param argv  string that contains help request command
+ *
+ * @return  returns true or false 
+ */
+bool get_help (char *argv[]);
+
+
+/**
+ * @brief Prints help information about using the application
+ *
+ * @param argv[]    string that contains help request command
+ *
+ * @return 0
+ */
+int help (char *argv[]);
 #endif // SERVER_FUNC_H

@@ -28,6 +28,13 @@ int main (int argc, char *argv[])
     hints.ai_socktype = SOCK_STREAM;   // TCP
     hints.ai_flags = AI_PASSIVE;   // fill ip 127.0.0.1
     
+    if (argc == 2 && (get_help (argv) == true))
+    {
+        help (argv);
+
+        return 0;
+    }
+
     // Server takes a string to send to client and port to bind to as arguments
     if (argc == 3)
     {

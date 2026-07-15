@@ -261,3 +261,22 @@ void *receive_handler (void *sockfd)
     close (fd);
     exit (0);
 }
+
+bool get_help (char *argv[])
+{
+    if (((strcmp (argv[1], "-h")) == 0 ) || (strcmp (argv[1], "--help") == 0))
+    {
+        return true;  
+    }
+    else
+    {
+        return false;
+    }
+}
+
+int help (char *argv[])
+{
+     printf ("Command:\n-h, --help -- access help information\n\n%s [PORT NUMBER] -- sets the port number to listen on. Default address is loopback, eg. %s 4567\n\n%s [IP ADDRESS] [PORT NUMBER] [PROTOCOL] -- sets the ip address and port to listen on with protocol type. Supported protcols are tcp, udp, http, eg. %s 192.168.1.10 4567 tcp\n\n%s -- application will prompt for commands\n\n", argv[0], argv[0], argv[0], argv[0], argv[0]);
+
+    return 0;
+}
